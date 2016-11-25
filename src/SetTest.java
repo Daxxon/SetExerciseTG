@@ -20,7 +20,7 @@ public class SetTest {
   }
 
   @Test
-  public void isEmpty_ReturnsFalse_WhenTheSetContainsAMember(){
+  public void isEmpty_ReturnsFalse_WhenTheSetContainsAMember() {
     testObject.add(0);
     boolean actual = testObject.isEmpty();
 
@@ -35,5 +35,14 @@ public class SetTest {
     int actual = testObject.size();
 
     assertEquals(1, actual);
+  }
+
+  @Test
+  public void size_returns0_whenNoMembersHaveBeenAdded() {
+
+    int actual = testObject.size();
+
+    assertEquals(0, actual);
+
   }
 }

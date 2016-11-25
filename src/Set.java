@@ -11,6 +11,6 @@ public class Set {
   }
 
   public int size() {
-    return 0;
+    return (hasBeenAddedTo)? 1 : 0;
   }
 }
