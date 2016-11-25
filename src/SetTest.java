@@ -77,4 +77,23 @@ public class SetTest {
     assertTrue(actual);
   }
 
+  @Test
+  public void containsReturnsTrueWhenSetContainsMoreThanOneMember() {
+
+    testObject.add(0);
+    testObject.add(6);
+
+    assertTrue(testObject.contains(0));
+    assertTrue(testObject.contains(6));
+  }
+
+  @Test
+  public void sizeDoesNotIncreaseWhenSameMemberIsAddedMoreThanOnce() {
+
+    testObject.add(0);
+    testObject.add(0);
+
+    assertEquals(1, testObject.size());
+  }
+
 }
