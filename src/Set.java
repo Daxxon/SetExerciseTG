@@ -2,11 +2,14 @@ public class Set {
 
   private boolean hasBeenAddedTo;
 
-  private int addCount;
+  private int size;
 
-  public void add(int i){
+  private Integer[] arrayOfMembers = new Integer[5];
+
+  public void add(int element){
     hasBeenAddedTo = true;
-    addCount++;
+    arrayOfMembers[size] = element;
+    size++;
   }
 
   public boolean isEmpty(){
@@ -14,6 +17,10 @@ public class Set {
   }
 
   public int size() {
-    return addCount;
+    return size;
+  }
+
+  public boolean contains(int element) {
+    return (size > 0) ? (arrayOfMembers[0] == element) : false;
   }
 }

@@ -60,4 +60,21 @@ public class SetTest {
     assertEquals(5, actual);
   }
 
+  @Test
+  public void containsReturnsFalseWhenElementIsNotMember() {
+
+    boolean actual = testObject.contains(0);
+
+    assertEquals(false, actual);
+  }
+
+  @Test
+  public void containsReturnsTrueWhenElementIsMember() {
+
+    testObject.add(6);
+    boolean actual = testObject.contains(6);
+
+    assertTrue(actual);
+  }
+
 }
