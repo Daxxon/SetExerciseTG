@@ -1,4 +1,5 @@
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -96,4 +97,43 @@ public class SetTest {
     assertEquals(1, testObject.size());
   }
 
+  @Test
+  public void passIfDesignatedElementIsRemovedFromSet() {
+    testObject.add(0);
+    testObject.add(1);
+    testObject.add(2);
+    testObject.add(3);
+    testObject.add(4);
+
+    testObject.remove(4);
+
+    assertTrue(!testObject.contains(4));
+  }
+
+  @Test
+  public void passIfSetHasBeenEmptied() {
+
+    testObject.add(0);
+    testObject.add(1);
+    testObject.add(2);
+    testObject.add(3);
+    testObject.add(4);
+
+    testObject.clear();
+
+    assertEquals(0, testObject.size());
+  }
+
+  @Test
+  public void passIfSetContainsDataAddedOutOfBounds() {
+    testObject.add(0);
+    testObject.add(1);
+    testObject.add(2);
+    testObject.add(3);
+    testObject.add(4);
+    testObject.add(5);
+
+    assertEquals(6, testObject.size());
+    assertTrue(testObject.contains(5));
+  }
 }
