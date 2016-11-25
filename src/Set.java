@@ -2,8 +2,11 @@ public class Set {
 
   private boolean hasBeenAddedTo;
 
+  private int addCount;
+
   public void add(int i){
     hasBeenAddedTo = true;
+    addCount++;
   }
 
   public boolean isEmpty(){
@@ -11,6 +14,6 @@ public class Set {
   }
 
   public int size() {
-    return (hasBeenAddedTo)? 1 : 0;
+    return addCount;
   }
 }

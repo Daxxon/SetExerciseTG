@@ -45,4 +45,19 @@ public class SetTest {
     assertEquals(0, actual);
 
   }
+
+  @Test
+  public void size_returnsNumberOfMembers() {
+
+    testObject.add(0);
+    testObject.add(1);
+    testObject.add(2);
+    testObject.add(3);
+    testObject.add(4);
+
+    int actual = testObject.size();
+
+    assertEquals(5, actual);
+  }
+
 }
