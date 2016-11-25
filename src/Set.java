@@ -10,4 +10,7 @@ public class Set {
     return !hasBeenAddedTo;
   }
 
+  public int size() {
+    return 0;
+  }
 }

@@ -26,4 +26,14 @@ public class SetTest {
 
     assertFalse(actual);
   }
+
+  @Test
+  public void size_returns1_whenOnlyOneMemberHasBeenAdded() throws Exception {
+
+    testObject.add(0);
+
+    int actual = testObject.size();
+
+    assertEquals(1, actual);
+  }
 }
