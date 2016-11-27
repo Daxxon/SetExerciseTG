@@ -38,6 +38,15 @@ public class Set {
     return false;
   }
 
+  private int indexOf(int element) {
+    for (int i = 0; i < currentSize; i++) {
+      if (arrayOfMembers[i] == element) {
+        return i;
+      }
+    }
+    return -1;
+  }
+
   public void remove(int element) {
     for (int i = 0; i < currentSize; i++) {
       if (arrayOfMembers[i] == element) {
