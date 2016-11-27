@@ -30,12 +30,7 @@ public class Set {
   }
 
   public boolean contains(int element) {
-    for (int i = 0; i < currentSize; i++) {
-      if (arrayOfMembers[i] == element) {
-        return true;
-      }
-    }
-    return false;
+    return indexOf(element) >= 0;
   }
 
   private int indexOf(int element) {
@@ -48,11 +43,10 @@ public class Set {
   }
 
   public void remove(int element) {
-    for (int i = 0; i < currentSize; i++) {
-      if (arrayOfMembers[i] == element) {
-        arrayOfMembers[i] = arrayOfMembers[size()-1];
-        currentSize--;
-      }
+    int i = indexOf(element);
+    if (i >= 0) {
+      arrayOfMembers[i] = arrayOfMembers[size() - 1];
+      currentSize--;
     }
   }
 
